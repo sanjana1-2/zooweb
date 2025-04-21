@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammals - Animal Category</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        /* Fallback styles if Tailwind fails */
+        body { background-color: #d1fae5; padding: 20px; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 16px; text-align: center; }
+        .card img { width: 100%; height: 192px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+        h2 { font-size: 24px; text-align: center; margin-bottom: 20px; color: #1f2937; }
+        h3 { font-size: 18px; font-weight: bold; margin-bottom: 8px; }
+        p { font-size: 14px; color: #4b5563; }
+        a.back-link { color: #1f2937; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        a.back-link:hover { color: #4b5563; }
+        [data-aos] { opacity: 1 !important; transform: none !important; }
+
+        body {
+            background-image: url('images/forest.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
+</head>
+<body class="bg-green-100" onload="try { AOS.init(); } catch(e) { console.log('AOS failed to initialize'); }">
+    <noscript>
+        <style>
+            [data-aos] { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+    <!-- Mammals Species Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <a href="animalcatagory.html" class="back-link inline-block mb-6 text-white hover:text-blue-600 font-semibold">Back to Categories</a>
+            <h2 class="text-3xl font-bold mb-8 text-white text-center" data-aos="fade-up">Mammal Species</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mammal 1: African Lion -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
+                             alt="African Lion" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load African Lion image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">African Lion</h3>
+                        <p class="text-black text-sm">African Lions are large carnivorous mammals known for their majestic manes and social prides. They are apex predators in African savannas.</p>
+                    </div>
+                </div>
+                <!-- Mammal 2: cheetha -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-4">
+                        <img src="images/brown_beer.jpg" 
+                             alt="Domestic Cat" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Domestic Cat image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Brown beer</h3>
+                        <p class="text-black text-sm">Brown beer, or brown ale, is a style of ale characterized by its brown color, which comes from using dark malts during brewing. It can range in flavor from sweet and malty to dry and hoppy, with flavors like caramel, chocolate, and nuts often present.</p>
+                    </div>
+                </div>
+                <!-- Mammal 6: leopard -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4">
+                        <img src="images/lepard.jpg" 
+                             alt="Red Panda" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Red Panda image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Leopard</h3>
+                        <p class="text-black text-sm">Leopards are wildcats known for their distinctive spotted coats and strong, muscular builds. They are solitary hunters, primarily active at night, and are skilled climbers, often storing their kills in trees.</p>
+                    </div>
+                </div>
+                <!-- Mammal 4: Bengal Tiger -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="250">
+                    <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
+                             alt="Bengal Tiger" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Bengal Tiger image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Bengal Tiger</h3>
+                        <p class="text-gblack text-sm">Bengal Tigers are large carnivorous mammals with distinctive orange coats and black stripes. They inhabit forests and swamps in India and are skilled hunters.</p>
+                    </div>
+                </div>
+                <!-- Mammal 5: Elephant -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1505148230895-d9a785a555fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" 
+                             alt="Elephant" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Elephant image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Elephant</h3>
+                        <p class="text-black text-sm">Elephants are the largest land mammals, known for their long trunks and large ears. They are highly intelligent and live in matriarchal herds.</p>
+                    </div>
+                </div>
+                <!-- Mammal 3: chim -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="350">
+                    <div class="p-4">
+                        <img src="images/chim.jpg" 
+                             alt="Sambar Deer" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Sambar Deer image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Chimpanzee</h3>
+                        <p class="text-black text-sm">Chimpanzees are great apes known for their intelligence and complex social structures. They are covered in coarse, brown or black hair, except for their bare faces, hands, and feet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

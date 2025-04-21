@@ -1,0 +1,63 @@
+body{
+    background-image:url(https://i0.wp.com/www.csscodelab.com/wp-content/uploads/2020/03/html-gradient-background-css.png?fit=993%2C649&ssl=1);
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    }
+    
+.box {
+    width: 70%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top:100px;
+    margin-bottom:100px;
+    background:#bdb9b9a8;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 15px;}
+
+h1,h2 {
+    text-align: center;
+}
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.member {
+    width: 25%;
+    margin: 10px;
+}
+.photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+.name {
+    margin-top:8px;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+}
+.role {
+    font-style: italic;
+    text-align: center;
+    color:black;
+}
+.img {
+    border:1px solid grey;
+}

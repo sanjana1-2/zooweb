@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Feedback Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .star {
+      cursor: pointer;
+      font-size: 2.5rem;
+      color: gray;
+      transition: color 0.3s ease;
+    }
+    .star:hover,
+    .star.selected {
+      color: #fbbf24;
+    }
+  </style>
+  <script>
+    function handleStarRating(event) {
+      if (event.target.classList.contains("star")) {
+        const stars = document.querySelectorAll(".star");
+        stars.forEach(star => star.classList.remove("selected"));
+        let ratingValue = event.target.getAttribute("data-value");
+        document.getElementById("rating").value = ratingValue;
+
+        for (let star of stars) {
+          if (parseInt(star.getAttribute("data-value")) <= ratingValue) {
+            star.classList.add("selected");
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gradient-to-r from-green-100 via-lime-100 to-yellow-100 min-h-screen py-10 font-sans text-gray-800">
+  <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg">
+    <h1 class="text-4xl font-extrabold text-center text-green-700 mb-2">🌿 Jungle Safari</h1>
+    <h3 class="text-md text-center text-gray-600 mb-6">Kindly fill out the feedback form below.</h3>
+    <hr class="mb-6 border-gray-300">
+
+    <form id="feedbackForm" class="space-y-6">
+      <div>
+        <label for="name" class="block font-semibold mb-1">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name" class="w-full border border-gray-300 rounded-md p-3 shadow-sm focus:ring-2 focus:ring-green-300 outline-none">
+      </div>
+
+      <div>
+        <label for="date" class="block font-semibold mb-1">Date of Visit</label>
+        <input type="date" id="date" name="date" required class="w-full border border-gray-300 rounded-md p-3 shadow-sm focus:ring-2 focus:ring-green-300 outline-none">
+      </div>
+
+      <fieldset>
+        <legend class="font-semibold text-lg mb-2">How satisfied are you with the Experience?</legend>
+        <div class="flex gap-2" onclick="handleStarRating(event)">
+          <span class="star" data-value="5">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="1">&#9733;</span>
+        </div>
+        <input type="hidden" id="rating" name="rating">
+      </fieldset>
+
+      <fieldset>
+        <legend class="font-semibold text-lg mb-2">Which part of our facility did you like the most?</legend>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <label><input type="checkbox" name="product" value="mammals" class="mr-2"> Mammals</label>
+          <label><input type="checkbox" name="product" value="amphibians" class="mr-2"> Amphibians</label>
+          <label><input type="checkbox" name="product" value="reptiles" class="mr-2"> Reptiles</label>
+          <label><input type="checkbox" name="product" value="aquatic" class="mr-2"> Aquatic</label>
+          <label><input type="checkbox" name="product" value="birds" class="mr-2"> Birds</label>
+          <label><input type="checkbox" name="product" value="insects" class="mr-2"> Insect Gallery</label>
+          <label class="col-span-2"><input type="checkbox" name="product" value="all" class="mr-2"> All the Animals</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="font-semibold text-lg mb-2">How likely are you to recommend us to others?</legend>
+        <div class="space-y-2 text-sm">
+          <label><input type="radio" name="recommendation" value="very-likely" class="mr-2"> Very Likely</label>
+          <label><input type="radio" name="recommendation" value="likely" class="mr-2"> Likely</label>
+          <label><input type="radio" name="recommendation" value="neutral" class="mr-2"> Neutral</label>
+          <label><input type="radio" name="recommendation" value="unlikely" class="mr-2"> Unlikely</label>
+          <label><input type="radio" name="recommendation" value="very-unlikely" class="mr-2"> Very Unlikely</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="suggestions" class="block font-semibold mb-1">Suggestions / Concerns</label>
+        <textarea id="suggestions" name="suggestions" rows="4" placeholder="Your thoughts matter..." class="w-full border border-gray-300 rounded-md p-3 shadow-sm focus:ring-2 focus:ring-green-300 outline-none"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 active:scale-95 transition-transform shadow-md">
+        Submit Feedback
+      </button>
+    </form>
+
+    <div class="mt-6 text-center text-gray-500 text-sm">
+      Kindly share your experience and suggestions to help us improve!
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+</head>
+<body class="bg-gray-100" onload="AOS.init()">
+    <!-- Feature Section -->
+    <section id="features" class="py-20 bg-green-100 p-6">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center text-4xl font-bold mb-12 text-gray-800" data-aos="fade-up">
+                EXPLORE & EXPERIENCE
+            </h2>
+            <a href="index.html" class="back-link inline-block mb-6 text-gray-700 p-2 bg-white/70 hover:bg-yellow-300 border-2 hover:text-blue-600 font-semibold absolute top-20 rounded-xl">Back to Home</a>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1: Mammals -->
+                <a href="mammals.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/mammal.jpg" alt="Mammals" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Mammals</h3>
+                            <p class="text-gray-600 text-sm">Warm-blooded vertebrates with mammary glands, hair or fur, and a four-chambered heart.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature Card 2: Fish -->
+                <a href="fish.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00" alt="Fish" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Fish</h3>
+                            <p class="text-gray-600 text-sm">Aquatic vertebrates that breathe using gills, possess fins, and generally have scales.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature Card 3: Reptiles -->
+                <a href="reptiles.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/rep.jpg" alt="Reptiles" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Reptiles</h3>
+                            <p class="text-gray-600 text-sm">Air-breathing, cold-blooded vertebrates with scaly bodies, mostly egg-laying.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature Card 4: Amphibians -->
+                <a href="amphibians.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="250">
+                        <img src="images/amp.webp" alt="Amphibians" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Amphibians</h3>
+                            <p class="text-gray-600 text-sm">Small vertebrates that need water or moist environments, with thin skin for breathing.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature Card 5: Invertebrates -->
+                <a href="invertebrates.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/inver.webp" alt="Invertebrates" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Invertebrates</h3>
+                            <p class="text-gray-600 text-sm">Animals without a backbone, comprising over 90% of all living animal species.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature Card 6: Birds -->
+                <a href="birds.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="350">
+                        <img src="images/bd.jpg" alt="Birds" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Birds</h3>
+                            <p class="text-gray-600 text-sm">Warm-blooded vertebrates with feathers, wings, and the only animals capable of flight in most species.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

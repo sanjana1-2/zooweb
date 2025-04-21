@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@4.1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <form action="">    
+        <label for="">Enter Name</label>
+        <input type="text"id="input1">
+        <label for="">Enter Name</label>
+        <input type="text"id="input2">
+        <label for="">Enter Name</label>
+        <input type="text"id="input3">
+        <label for="">Choose State</label>
+        <select name="" id="select1">
+            <option value="punjab">punjab</option>
+            <option value="up">up</option>
+            <option value="himachal">himachal</option>
+            <option value="kerala">kerala</option>
+            <option value="MP">MP</option>
+        </select>
+
+    </form>
+    <div class="border-2 h-20 bg-amber-500 "id="div3">
+        <p></p>
+    </div>
+    <p>jhhhhhhhhhhhh</p>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="app">Append</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="pep">prepend</button>
+
+    <img src="/src/images/image.png" alt=""class="w-32 h-32 border-2" id="img1">
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="show">button1</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="hide">button1</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="toggle">toggle</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="fadein">Fade in</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="fadeout">Fade out</button>
+    <button class="border-2 bg-teal-100 p-2 m-3 rounded-lg" id="fadeto">Fade to</button>
+    <script>
+        $('#input1').focus(function(){
+            $(this).css("background-color"," pink")
+        });
+        $('#input2').blur(function(){
+            $(this).css("background-color"," ")
+        });
+        $('#input3').select(function(){
+            $(this).css("background-color"," brown")
+        });
+        $('#select1').change(function(){
+             $(this).css({"background-color":" pink","color":"white"})
+             var a=$(this).val();
+            $('#div3').html(a);
+        });
+        $(document).ready(function(){
+            $('#show').click(function(){
+                $('#img1').show();
+            });
+            $('#hide').click(function(){
+                $('#img1').hide();
+            });
+            $('#toggle').click(function(){
+                $('#img1').toggle();
+            });
+
+           $('#fadein').click(function(){
+                $('#img1').fadeIn();
+           });
+           $('#fadeout').click(function(){
+                $('#img1').fadeOut();
+           });
+           $('#fadeto').click(function(){
+                $('#img1').fadeTo(2000);
+           });
+           $('#app').click(function(){
+            $('p').append("<p>frontend</p>")
+           })
+           $('#pep').click(function(){
+            $('p').prepend("<p>frontend</p>")
+           })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h1>"JUNGLE SAFARII"</h1>
+        <h3>Kindly fill the feedback form below.</h3>
+        <hr>
+        <br>
+    <form action="#" method="post" id="feedbackForm">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name.">
+
+        <label for="email"><b>Enter the date of visit:</b></label>
+        <input type="date" id="date" name="date" required>
+
+        <fieldset>
+            <legend>How satisfied are you with the Experience?</legend>
+            <div class="stars" onclick="handleStarRating(event)">
+                <span class="star" data-value="5">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="1">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating" name="rating">
+        </fieldset>
+
+        <fieldset>
+            <legend>Which part of our facility you liked the most?</legend>
+            <label><input type="checkbox" name="product" value="product1"> Mammals</label>
+            <label><input type="checkbox" name="product" value="product2"> Amphibians</label>
+            <label><input type="checkbox" name="product" value="product3"> Reptiles</label>
+            <label><input type="checkbox" name="product" value="product4"> Aquatic</label>
+            <label><input type="checkbox" name="product" value="product4"> Birds</label>
+            <label><input type="checkbox" name="product" value="product4"> Insect Gallery</label>
+            <label><input type="checkbox" name="product" value="product5"> All the animals</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>How likely are you to recommend others to visit?</legend>
+            <label><input type="radio" name="recommendation" value="very-likely"> Very Likely</label>
+            <label><input type="radio" name="recommendation" value="likely"> Likely</label>
+            <label><input type="radio" name="recommendation" value="neutral"> Neutral</label>
+            <label><input type="radio" name="recommendation" value="unlikely"> Unlikely</label>
+            <label><input type="radio" name="recommendation" value="very-unlikely"> Very Unlikely</label>
+        </fieldset>
+
+        <label for="suggestions"><b>Any improvement concerns or suggestions:</b></label>
+        <textarea id="suggestions" name="suggestions" rows="4" placeholder="Any suggestions..."></textarea>
+
+        <button class="button" type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="message" class="message">Kindly fill this feedback form <br>and provide suggestions for features needed to be improved...</div>
+</div>
+</body>
+</html>

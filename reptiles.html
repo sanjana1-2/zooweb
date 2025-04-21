@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reptiles - Animal Category</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        /* Fallback styles if Tailwind fails */
+        body { background-color: #d1fae5; padding: 20px; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 16px; text-align: center; }
+        .card img { width: 100%; height: 192px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+        h2 { font-size: 24px; text-align: center; margin-bottom: 20px; color: #1f2937; }
+        h3 { font-size: 18px; font-weight: bold; margin-bottom: 8px; }
+        p { font-size: 14px; color: #4b5563; }
+        a.back-link { color: #1f2937; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        a.back-link:hover { color: #4b5563; }
+        [data-aos] { opacity: 1 !important; transform: none !important; }
+
+        body {
+            background-image: url('images/forest.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-green-100" onload="try { AOS.init(); } catch(e) { console.log('AOS failed to initialize'); }">
+    <noscript>
+        <style>
+            [data-aos] { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+    <!-- Reptiles Species Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <a href="animalcatagory.html" class="back-link inline-block mb-6 text-white hover:text-blue-600 font-semibold">Back to Categories</a>
+            <h2 class="text-3xl font-bold mb-8 text-white text-center" data-aos="fade-up">Reptile Species</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reptile 1: King Cobra -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up_clockwise" data-aos-delay="100">
+                    <div class="p-4">
+                        <img src="images/cobra.jpg" 
+                             alt="King Cobra" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load King Cobra image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">King Cobra</h3>
+                        <p class="text-black text-sm">King cobras are impressively venomous, large snakes native to Asia. They are called king cobras because they can kill and eat cobras. A full-grown king cobra is yellow, green, brown or black, typically with yellow-white crossbars or chevrons.</p>
+                    </div>
+                </div>
+                <!-- Reptile 2: Indian Python -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-4">
+                        <img src="images/python.jpg" 
+                             alt="Indian Python" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Indian Python image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Indian Python</h3>
+                        <p class="text-black text-sm">Indian pythons are among the largest snakes in the world, averaging 3 meters (9 feet 10 inches) in length, but can grow up to 6 meters (20 feet). Their bodies are thick and covered in smooth, iridescent scales. They have a distinctive triangular head with heat-sensitive pits on their snouts.</p>
+                    </div>
+                </div>
+                <!-- Reptile 3: Crocodile -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4">
+                        <img src="images/crocodiles.webp" 
+                             alt="Crocodile" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Crocodile image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Crocodile</h3>
+                        <p class="text-black text-sm">Crocodiles are large, aquatic reptiles with powerful jaws and armored bodies. They inhabit rivers, lakes, and wetlands, and are known for their ambush hunting techniques.</p>
+                    </div>
+                </div>
+                <!-- Reptile 4: Chameleon -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="250">
+                    <div class="p-4">
+                        <img src="images/chameleons.webp" 
+                             alt="Chameleon" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Chameleon image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Chameleon</h3>
+                        <p class="text-black text-sm">Chameleons are small to medium-sized reptiles known for their color-changing abilities and long, sticky tongues. They are primarily arboreal and native to Africa and Madagascar.</p>
+                    </div>
+                </div>
+                <!-- Reptile 5: Monitor Lizard -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4">
+                        <img src="images/Monitor_Lizard.jpg" 
+                             alt="Monitor Lizard" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Monitor Lizard image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Monitor Lizard</h3>
+                        <p class="text-black text-sm">Monitor lizards are large reptiles with elongated heads, powerful limbs, and long tails. They are carnivorous and found in Africa, Asia, and Australia.</p>
+                    </div>
+                </div>
+                <!-- Reptile 6: Indian Star Tortoise -->
+                <div class="card bg-white rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="350">
+                    <div class="p-4">
+                        <img src="images/Star_Tortoise.webp" 
+                             alt="Indian Star Tortoise" 
+                             class="w-full h-48 object-cover rounded-lg mb-3" 
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1602842506952-c0a3b7c716fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'; console.log('Failed to load Indian Star Tortoise image');">
+                        <h3 class="text-lg font-bold mb-2 text-center">Indian Star Tortoise</h3>
+                        <p class="text-black text-sm">The Indian star tortoise is a small tortoise with a distinctive shell adorned with star-shaped patterns. These patterns help them camouflage in their natural habitats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

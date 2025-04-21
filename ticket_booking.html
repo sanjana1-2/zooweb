@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        .btn {
+            background-color: #ff758c;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff3b6f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-4 text-center">Book a Ticket</h2>
+        <form action="ticket_booking.php" method="post" id="bookingForm">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name:</label>
+                <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="date" class="block text-gray-700">Date:</label>
+                <input type="date" id="date" name="date" class="w-full px-3 py-2 border rounded" required>
+            </div>
+            <div class="mb-4">
+                <label for="tickets" class="block text-gray-700">Number of Tickets:</label>
+                <input type="number" id="tickets" name="tickets" class="w-full px-3 py-2 border rounded" required>
+            </div>
+            <button type="submit" class="btn w-full">Book</button>
+        </form>
+        <div class="mt-6 text-center">
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            $('#bookingForm').on('submit', function(e) {
+                alert('Your ticket booking form has been submitted!');
+            });
+        });
+    </script>
+</body>
+</html>
